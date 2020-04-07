@@ -3,14 +3,19 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 
 export const Hero = (props) => {
 	return (
-		<View>
-			<Text> {props.name} </Text>
+		<View style={styles.container}>
+			<Button 
+				title = {props.hero.name}
+				onPress = {() => alert(props.hero.name+' '+props.hero.universe)}
+				color = 'orange'
+			/>
 		</View>
 	)
 }
 
 const styles = StyleSheet.create({
 	container: {
-		marginTop: 50
+		marginTop: 10,
+		backgroundColor: 'orange'
 	},
 });

@@ -1,20 +1,23 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { Hero } from './Hero';
+import {heroes} from './tempHeroes'
 
-export const Dashboard = () => {
+export const Dashboard = ({navigation}) => {
 	return (
 		<View style={styles.container}>
 			<Button 
-				onPress ={ () => {alert('To heroes list')}}
+				onPress ={ () => {navigation.navigate('HeroList')}}
 				title='Heroes'
 			/>
-			<Hero name='Test Hero'></Hero>
+			{
+				heroes.map(hero => <Hero hero ={hero}/>)
+			}
 		</View>
 	);
 }
 const styles = StyleSheet.create({
 	container: {
-		marginTop: 50
+		
 	},
 });
