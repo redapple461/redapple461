@@ -1,6 +1,6 @@
 export let heroes = [
-	{name: 'Thor', universe: 'Marvel'},
-	{name: 'Locky', universe: 'Marvel'},
-	{name: 'Batman', universe: 'DC'},
-	{name: 'Joker', universe: 'DC'}
+	{id: 0, name: 'Thor', universe: 'Marvel'},
+	{id: 1, name: 'Locky', universe: 'Marvel'},
+	{id: 2, name: 'Batman', universe: 'DC'},
+	{id: 3, name: 'Joker', universe: 'DC'}
 ]

@@ -1,12 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import { useDispatch } from 'react-redux';
+import * as actions  from './actions'
 
 export const Hero = (props) => {
+  const dispath = useDispatch();
 	return (
 		<View style={styles.container}>
 			<Button 
 				title = {props.hero.name}
-				onPress = {() => alert(props.hero.name+' '+props.hero.universe)}
+				onPress = {() => {dispath(actions.initDetailHero(props.hero)), props.navigation.navigate('HeroPage')}}
 				color = 'orange'
 			/>
 		</View>
